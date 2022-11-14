@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const _ = require('Lodash')
+const _ = require('Lodash');
 
 const app = express();
 
@@ -143,6 +143,10 @@ app.get('/about', function (req, res) {
     res.render('about');
 });
 
-app.listen(3000, function (req, res) {
-    console.log('Server running on port 3000!');
+let port = process.env.PORT;
+if (port === null || port == "") {
+    port = 3000;
+}
+app.listen(port, function (req, res) {
+    console.log('Server started successfully!');
 });
