@@ -6,7 +6,7 @@
     </div>
     <div class="box">
         <form class="item" action="/" method="post">
-            <input type="text" name="newItem" placeholder="New ToDo" autocomplete="off">
+            <input type="text" name="newItem" placeholder="New ToDo" autocomplete="off" required>
             <button type="submit" name="list" value="<%=listTitle%>">+</button>
         </form>
         <% newListItems.forEach(function(item) { %>
